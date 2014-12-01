@@ -18,28 +18,26 @@
 @implementation NavigationViewController
 
 - (void)viewWillAppear:(BOOL)animated {
-    
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     PFUser *user = [PFUser currentUser];
     [PFUser logOut];
     
     if (user == nil) {
         NSLog(@"They need to make a new account");
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        UIViewController *login = [storyboard instantiateViewControllerWithIdentifier:@"login"];
-        [self.navigationController pushViewController:login animated:YES];
-        
-    } else {
-        NSLog(@"User has an account");
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        UIViewController *home = [storyboard instantiateViewControllerWithIdentifier:@"login"];
-        [self.navigationController pushViewController:home animated:YES];
-
+        [self performSegueWithIdentifier:@"loginSegue" sender:self];
     }
+    // since each navigation controller has a root VC relationship
+    // as defined in the storyboard, nothing else needs to be done.
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    }
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

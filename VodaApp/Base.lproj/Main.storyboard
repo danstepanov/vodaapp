@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8nb-2A-ly7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8nb-2A-ly7">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -49,10 +50,10 @@
                                 <exclude reference="ltp-R7-unc"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="JaB-vI-dPe"/>
                                 <exclude reference="J3B-BA-x2e"/>
                                 <exclude reference="hwj-d1-daU"/>
                                 <exclude reference="l8J-Sa-rEH"/>
-                                <exclude reference="JaB-vI-dPe"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -61,10 +62,10 @@
                                 <include reference="ltp-R7-unc"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="JaB-vI-dPe"/>
                                 <include reference="J3B-BA-x2e"/>
                                 <include reference="hwj-d1-daU"/>
                                 <include reference="l8J-Sa-rEH"/>
-                                <include reference="JaB-vI-dPe"/>
                             </mask>
                         </variation>
                     </view>
@@ -88,7 +89,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screen 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YT2-w0-TC8">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -113,10 +114,10 @@
                                 <exclude reference="3Jm-w4-F2J"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="u26-AF-8HP"/>
                                 <exclude reference="7FY-65-Odg"/>
                                 <exclude reference="9QZ-Jf-tFn"/>
                                 <exclude reference="MuO-7k-Xas"/>
-                                <exclude reference="u26-AF-8HP"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -125,10 +126,10 @@
                                 <include reference="3Jm-w4-F2J"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="u26-AF-8HP"/>
                                 <include reference="7FY-65-Odg"/>
                                 <include reference="9QZ-Jf-tFn"/>
                                 <include reference="MuO-7k-Xas"/>
-                                <include reference="u26-AF-8HP"/>
                             </mask>
                         </variation>
                     </view>
@@ -316,7 +317,7 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="cGS-EB-GnD"/>
-                        <segue destination="gbw-w2-JgO" kind="show" id="0y8-6G-Mdb"/>
+                        <segue destination="gbw-w2-JgO" kind="presentation" identifier="loginSegue" id="0y8-6G-Mdb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRu-km-ZtY" userLabel="First Responder" sceneMemberID="firstResponder"/>
