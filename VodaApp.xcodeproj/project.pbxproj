@@ -26,6 +26,13 @@
 		D00BEFEC1A2C297C005C1BED /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BEFE21A2C297C005C1BED /* SystemConfiguration.framework */; };
 		D00BEFF01A2C29CB005C1BED /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BEFEE1A2C29CB005C1BED /* Bolts.framework */; };
 		D00BEFF11A2C29CB005C1BED /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BEFEF1A2C29CB005C1BED /* Parse.framework */; };
+		D00BEFF31A2C3EC7005C1BED /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BEFF21A2C3EC7005C1BED /* ParseFacebookUtils.framework */; };
+		D00BEFF51A2C415E005C1BED /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BEFF41A2C415D005C1BED /* FacebookSDK.framework */; };
+		D00BF0031A2CCB16005C1BED /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BF0021A2CCB16005C1BED /* CoreFoundation.framework */; };
+		D00BF0041A2CCC66005C1BED /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00BF0001A2C51BD005C1BED /* NavigationViewController.m */; };
+		D00BF0061A2CCC66005C1BED /* SyncDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00BEFFA1A2C513A005C1BED /* SyncDeviceViewController.m */; };
+		D00BF0071A2CCC66005C1BED /* DeviceInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00BEFFD1A2C5160005C1BED /* DeviceInfoViewController.m */; };
+		D00BF00A1A2CD2E7005C1BED /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00BF0091A2CD2E7005C1BED /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +71,17 @@
 		D00BEFE21A2C297C005C1BED /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D00BEFEE1A2C29CB005C1BED /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		D00BEFEF1A2C29CB005C1BED /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		D00BEFF21A2C3EC7005C1BED /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		D00BEFF41A2C415D005C1BED /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		D00BEFF91A2C513A005C1BED /* SyncDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyncDeviceViewController.h; path = ../SyncDeviceViewController.h; sourceTree = "<group>"; };
+		D00BEFFA1A2C513A005C1BED /* SyncDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SyncDeviceViewController.m; path = ../SyncDeviceViewController.m; sourceTree = "<group>"; };
+		D00BEFFC1A2C5160005C1BED /* DeviceInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceInfoViewController.h; path = ../DeviceInfoViewController.h; sourceTree = "<group>"; };
+		D00BEFFD1A2C5160005C1BED /* DeviceInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceInfoViewController.m; path = ../DeviceInfoViewController.m; sourceTree = "<group>"; };
+		D00BEFFF1A2C51BD005C1BED /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NavigationViewController.h; path = ../NavigationViewController.h; sourceTree = "<group>"; };
+		D00BF0001A2C51BD005C1BED /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NavigationViewController.m; path = ../NavigationViewController.m; sourceTree = "<group>"; };
+		D00BF0021A2CCB16005C1BED /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		D00BF0081A2CD2E7005C1BED /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../LoginViewController.h; sourceTree = "<group>"; };
+		D00BF0091A2CD2E7005C1BED /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D00BF0031A2CCB16005C1BED /* CoreFoundation.framework in Frameworks */,
 				D00BEFE31A2C297C005C1BED /* AudioToolbox.framework in Frameworks */,
 				D00BEFE41A2C297C005C1BED /* CFNetwork.framework in Frameworks */,
 				D00BEFE51A2C297C005C1BED /* CoreGraphics.framework in Frameworks */,
@@ -83,6 +102,8 @@
 				D00BEFEB1A2C297C005C1BED /* StoreKit.framework in Frameworks */,
 				D00BEFF11A2C29CB005C1BED /* Parse.framework in Frameworks */,
 				D00BEFEC1A2C297C005C1BED /* SystemConfiguration.framework in Frameworks */,
+				D00BEFF31A2C3EC7005C1BED /* ParseFacebookUtils.framework in Frameworks */,
+				D00BEFF51A2C415E005C1BED /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +120,7 @@
 		D00BEFA71A2C2536005C1BED = {
 			isa = PBXGroup;
 			children = (
+				D00BF0021A2CCB16005C1BED /* CoreFoundation.framework */,
 				D00BEFB21A2C2537005C1BED /* VodaApp */,
 				D00BEFCC1A2C2537005C1BED /* VodaAppTests */,
 				D00BEFB11A2C2537005C1BED /* Products */,
@@ -119,6 +141,14 @@
 			children = (
 				D00BEFB71A2C2537005C1BED /* AppDelegate.h */,
 				D00BEFB81A2C2537005C1BED /* AppDelegate.m */,
+				D00BEFFF1A2C51BD005C1BED /* NavigationViewController.h */,
+				D00BF0001A2C51BD005C1BED /* NavigationViewController.m */,
+				D00BF0081A2CD2E7005C1BED /* LoginViewController.h */,
+				D00BF0091A2CD2E7005C1BED /* LoginViewController.m */,
+				D00BEFF91A2C513A005C1BED /* SyncDeviceViewController.h */,
+				D00BEFFA1A2C513A005C1BED /* SyncDeviceViewController.m */,
+				D00BEFFC1A2C5160005C1BED /* DeviceInfoViewController.h */,
+				D00BEFFD1A2C5160005C1BED /* DeviceInfoViewController.m */,
 				D00BEFBA1A2C2537005C1BED /* ViewController.h */,
 				D00BEFBB1A2C2537005C1BED /* ViewController.m */,
 				D00BEFBD1A2C2537005C1BED /* Main.storyboard */,
@@ -159,6 +189,8 @@
 		D00BEFED1A2C299F005C1BED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D00BEFF41A2C415D005C1BED /* FacebookSDK.framework */,
+				D00BEFF21A2C3EC7005C1BED /* ParseFacebookUtils.framework */,
 				D00BEFEE1A2C29CB005C1BED /* Bolts.framework */,
 				D00BEFEF1A2C29CB005C1BED /* Parse.framework */,
 				D00BEFD91A2C297C005C1BED /* AudioToolbox.framework */,
@@ -225,6 +257,7 @@
 				TargetAttributes = {
 					D00BEFAF1A2C2537005C1BED = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 4ETUTSYY89;
 					};
 					D00BEFC81A2C2537005C1BED = {
 						CreatedOnToolsVersion = 6.1;
@@ -276,7 +309,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D00BF0041A2CCC66005C1BED /* NavigationViewController.m in Sources */,
+				D00BF0061A2CCC66005C1BED /* SyncDeviceViewController.m in Sources */,
+				D00BF0071A2CCC66005C1BED /* DeviceInfoViewController.m in Sources */,
 				D00BEFBC1A2C2537005C1BED /* ViewController.m in Sources */,
+				D00BF00A1A2CD2E7005C1BED /* LoginViewController.m in Sources */,
 				D00BEFB91A2C2537005C1BED /* AppDelegate.m in Sources */,
 				D00BEFB61A2C2537005C1BED /* main.m in Sources */,
 			);
@@ -403,10 +440,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/danielstepanov/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = VodaApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -417,10 +456,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/danielstepanov/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = VodaApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -477,6 +518,7 @@
 				D00BEFD51A2C2537005C1BED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D00BEFD61A2C2537005C1BED /* Build configuration list for PBXNativeTarget "VodaAppTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +527,7 @@
 				D00BEFD81A2C2537005C1BED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
