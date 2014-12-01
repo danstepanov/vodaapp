@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D00BEFB61A2C2537005C1BED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D00BEFB51A2C2537005C1BED /* main.m */; };
+		D00BEFB91A2C2537005C1BED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D00BEFB81A2C2537005C1BED /* AppDelegate.m */; };
+		D00BEFBC1A2C2537005C1BED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00BEFBB1A2C2537005C1BED /* ViewController.m */; };
+		D00BEFBF1A2C2537005C1BED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00BEFBD1A2C2537005C1BED /* Main.storyboard */; };
+		D00BEFC11A2C2537005C1BED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00BEFC01A2C2537005C1BED /* Images.xcassets */; };
+		D00BEFC41A2C2537005C1BED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D00BEFC21A2C2537005C1BED /* LaunchScreen.xib */; };
+		D00BEFD01A2C2537005C1BED /* VodaAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D00BEFCF1A2C2537005C1BED /* VodaAppTests.m */; };
+		D00BEFE31A2C297C005C1BED /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BEFD91A2C297C005C1BED /* AudioToolbox.framework */; };
+		D00BEFE41A2C297C005C1BED /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BEFDA1A2C297C005C1BED /* CFNetwork.framework */; };
+		D00BEFE51A2C297C005C1BED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BEFDB1A2C297C005C1BED /* CoreGraphics.framework */; };
+		D00BEFE61A2C297C005C1BED /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BEFDC1A2C297C005C1BED /* CoreLocation.framework */; };
+		D00BEFE71A2C297C005C1BED /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BEFDD1A2C297C005C1BED /* libz.dylib */; };
+		D00BEFE81A2C297C005C1BED /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BEFDE1A2C297C005C1BED /* MobileCoreServices.framework */; };
+		D00BEFE91A2C297C005C1BED /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BEFDF1A2C297C005C1BED /* QuartzCore.framework */; };
+		D00BEFEA1A2C297C005C1BED /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BEFE01A2C297C005C1BED /* Security.framework */; };
+		D00BEFEB1A2C297C005C1BED /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BEFE11A2C297C005C1BED /* StoreKit.framework */; };
+		D00BEFEC1A2C297C005C1BED /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BEFE21A2C297C005C1BED /* SystemConfiguration.framework */; };
+		D00BEFF01A2C29CB005C1BED /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BEFEE1A2C29CB005C1BED /* Bolts.framework */; };
+		D00BEFF11A2C29CB005C1BED /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BEFEF1A2C29CB005C1BED /* Parse.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D00BEFCA1A2C2537005C1BED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D00BEFA81A2C2536005C1BED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D00BEFAF1A2C2537005C1BED;
+			remoteInfo = VodaApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D00BEFB01A2C2537005C1BED /* VodaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VodaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D00BEFB41A2C2537005C1BED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D00BEFB51A2C2537005C1BED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D00BEFB71A2C2537005C1BED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D00BEFB81A2C2537005C1BED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D00BEFBA1A2C2537005C1BED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D00BEFBB1A2C2537005C1BED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D00BEFBE1A2C2537005C1BED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D00BEFC01A2C2537005C1BED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D00BEFC31A2C2537005C1BED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D00BEFC91A2C2537005C1BED /* VodaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VodaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D00BEFCE1A2C2537005C1BED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D00BEFCF1A2C2537005C1BED /* VodaAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VodaAppTests.m; sourceTree = "<group>"; };
+		D00BEFD91A2C297C005C1BED /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D00BEFDA1A2C297C005C1BED /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D00BEFDB1A2C297C005C1BED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D00BEFDC1A2C297C005C1BED /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D00BEFDD1A2C297C005C1BED /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		D00BEFDE1A2C297C005C1BED /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D00BEFDF1A2C297C005C1BED /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D00BEFE01A2C297C005C1BED /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D00BEFE11A2C297C005C1BED /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		D00BEFE21A2C297C005C1BED /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D00BEFEE1A2C29CB005C1BED /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		D00BEFEF1A2C29CB005C1BED /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D00BEFAD1A2C2537005C1BED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D00BEFE31A2C297C005C1BED /* AudioToolbox.framework in Frameworks */,
+				D00BEFE41A2C297C005C1BED /* CFNetwork.framework in Frameworks */,
+				D00BEFE51A2C297C005C1BED /* CoreGraphics.framework in Frameworks */,
+				D00BEFE61A2C297C005C1BED /* CoreLocation.framework in Frameworks */,
+				D00BEFE71A2C297C005C1BED /* libz.dylib in Frameworks */,
+				D00BEFE81A2C297C005C1BED /* MobileCoreServices.framework in Frameworks */,
+				D00BEFE91A2C297C005C1BED /* QuartzCore.framework in Frameworks */,
+				D00BEFEA1A2C297C005C1BED /* Security.framework in Frameworks */,
+				D00BEFF01A2C29CB005C1BED /* Bolts.framework in Frameworks */,
+				D00BEFEB1A2C297C005C1BED /* StoreKit.framework in Frameworks */,
+				D00BEFF11A2C29CB005C1BED /* Parse.framework in Frameworks */,
+				D00BEFEC1A2C297C005C1BED /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D00BEFC61A2C2537005C1BED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D00BEFA71A2C2536005C1BED = {
+			isa = PBXGroup;
+			children = (
+				D00BEFB21A2C2537005C1BED /* VodaApp */,
+				D00BEFCC1A2C2537005C1BED /* VodaAppTests */,
+				D00BEFB11A2C2537005C1BED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D00BEFB11A2C2537005C1BED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D00BEFB01A2C2537005C1BED /* VodaApp.app */,
+				D00BEFC91A2C2537005C1BED /* VodaAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D00BEFB21A2C2537005C1BED /* VodaApp */ = {
+			isa = PBXGroup;
+			children = (
+				D00BEFB71A2C2537005C1BED /* AppDelegate.h */,
+				D00BEFB81A2C2537005C1BED /* AppDelegate.m */,
+				D00BEFBA1A2C2537005C1BED /* ViewController.h */,
+				D00BEFBB1A2C2537005C1BED /* ViewController.m */,
+				D00BEFBD1A2C2537005C1BED /* Main.storyboard */,
+				D00BEFC01A2C2537005C1BED /* Images.xcassets */,
+				D00BEFC21A2C2537005C1BED /* LaunchScreen.xib */,
+				D00BEFED1A2C299F005C1BED /* Frameworks */,
+				D00BEFB31A2C2537005C1BED /* Supporting Files */,
+			);
+			path = VodaApp;
+			sourceTree = "<group>";
+		};
+		D00BEFB31A2C2537005C1BED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D00BEFB41A2C2537005C1BED /* Info.plist */,
+				D00BEFB51A2C2537005C1BED /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D00BEFCC1A2C2537005C1BED /* VodaAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				D00BEFCF1A2C2537005C1BED /* VodaAppTests.m */,
+				D00BEFCD1A2C2537005C1BED /* Supporting Files */,
+			);
+			path = VodaAppTests;
+			sourceTree = "<group>";
+		};
+		D00BEFCD1A2C2537005C1BED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D00BEFCE1A2C2537005C1BED /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D00BEFED1A2C299F005C1BED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D00BEFEE1A2C29CB005C1BED /* Bolts.framework */,
+				D00BEFEF1A2C29CB005C1BED /* Parse.framework */,
+				D00BEFD91A2C297C005C1BED /* AudioToolbox.framework */,
+				D00BEFDA1A2C297C005C1BED /* CFNetwork.framework */,
+				D00BEFDB1A2C297C005C1BED /* CoreGraphics.framework */,
+				D00BEFDC1A2C297C005C1BED /* CoreLocation.framework */,
+				D00BEFDD1A2C297C005C1BED /* libz.dylib */,
+				D00BEFDE1A2C297C005C1BED /* MobileCoreServices.framework */,
+				D00BEFDF1A2C297C005C1BED /* QuartzCore.framework */,
+				D00BEFE01A2C297C005C1BED /* Security.framework */,
+				D00BEFE11A2C297C005C1BED /* StoreKit.framework */,
+				D00BEFE21A2C297C005C1BED /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D00BEFAF1A2C2537005C1BED /* VodaApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D00BEFD31A2C2537005C1BED /* Build configuration list for PBXNativeTarget "VodaApp" */;
+			buildPhases = (
+				D00BEFAC1A2C2537005C1BED /* Sources */,
+				D00BEFAD1A2C2537005C1BED /* Frameworks */,
+				D00BEFAE1A2C2537005C1BED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VodaApp;
+			productName = VodaApp;
+			productReference = D00BEFB01A2C2537005C1BED /* VodaApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D00BEFC81A2C2537005C1BED /* VodaAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D00BEFD61A2C2537005C1BED /* Build configuration list for PBXNativeTarget "VodaAppTests" */;
+			buildPhases = (
+				D00BEFC51A2C2537005C1BED /* Sources */,
+				D00BEFC61A2C2537005C1BED /* Frameworks */,
+				D00BEFC71A2C2537005C1BED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D00BEFCB1A2C2537005C1BED /* PBXTargetDependency */,
+			);
+			name = VodaAppTests;
+			productName = VodaAppTests;
+			productReference = D00BEFC91A2C2537005C1BED /* VodaAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D00BEFA81A2C2536005C1BED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Daniel Stepanov";
+				TargetAttributes = {
+					D00BEFAF1A2C2537005C1BED = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					D00BEFC81A2C2537005C1BED = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = D00BEFAF1A2C2537005C1BED;
+					};
+				};
+			};
+			buildConfigurationList = D00BEFAB1A2C2537005C1BED /* Build configuration list for PBXProject "VodaApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D00BEFA71A2C2536005C1BED;
+			productRefGroup = D00BEFB11A2C2537005C1BED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D00BEFAF1A2C2537005C1BED /* VodaApp */,
+				D00BEFC81A2C2537005C1BED /* VodaAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D00BEFAE1A2C2537005C1BED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D00BEFBF1A2C2537005C1BED /* Main.storyboard in Resources */,
+				D00BEFC41A2C2537005C1BED /* LaunchScreen.xib in Resources */,
+				D00BEFC11A2C2537005C1BED /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D00BEFC71A2C2537005C1BED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D00BEFAC1A2C2537005C1BED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D00BEFBC1A2C2537005C1BED /* ViewController.m in Sources */,
+				D00BEFB91A2C2537005C1BED /* AppDelegate.m in Sources */,
+				D00BEFB61A2C2537005C1BED /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D00BEFC51A2C2537005C1BED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D00BEFD01A2C2537005C1BED /* VodaAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D00BEFCB1A2C2537005C1BED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D00BEFAF1A2C2537005C1BED /* VodaApp */;
+			targetProxy = D00BEFCA1A2C2537005C1BED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D00BEFBD1A2C2537005C1BED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D00BEFBE1A2C2537005C1BED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D00BEFC21A2C2537005C1BED /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D00BEFC31A2C2537005C1BED /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D00BEFD11A2C2537005C1BED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D00BEFD21A2C2537005C1BED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D00BEFD41A2C2537005C1BED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = VodaApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D00BEFD51A2C2537005C1BED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = VodaApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D00BEFD71A2C2537005C1BED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VodaAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VodaApp.app/VodaApp";
+			};
+			name = Debug;
+		};
+		D00BEFD81A2C2537005C1BED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VodaAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VodaApp.app/VodaApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D00BEFAB1A2C2537005C1BED /* Build configuration list for PBXProject "VodaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D00BEFD11A2C2537005C1BED /* Debug */,
+				D00BEFD21A2C2537005C1BED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D00BEFD31A2C2537005C1BED /* Build configuration list for PBXNativeTarget "VodaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D00BEFD41A2C2537005C1BED /* Debug */,
+				D00BEFD51A2C2537005C1BED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D00BEFD61A2C2537005C1BED /* Build configuration list for PBXNativeTarget "VodaAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D00BEFD71A2C2537005C1BED /* Debug */,
+				D00BEFD81A2C2537005C1BED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D00BEFA81A2C2536005C1BED /* Project object */;
+}
