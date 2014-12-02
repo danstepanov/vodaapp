@@ -60,14 +60,14 @@
                                 <exclude reference="KFK-RA-hRx"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="JaB-vI-dPe"/>
+                                <exclude reference="cYZ-td-xvJ"/>
                                 <exclude reference="J3B-BA-x2e"/>
                                 <exclude reference="hwj-d1-daU"/>
                                 <exclude reference="l8J-Sa-rEH"/>
                                 <exclude reference="Ruc-ST-9D9"/>
                                 <exclude reference="r7y-2h-PXt"/>
                                 <exclude reference="yEv-dr-klo"/>
-                                <exclude reference="JaB-vI-dPe"/>
-                                <exclude reference="cYZ-td-xvJ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -75,10 +75,10 @@
                                 <include reference="KFK-RA-hRx"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="cYZ-td-xvJ"/>
                                 <include reference="Ruc-ST-9D9"/>
                                 <include reference="r7y-2h-PXt"/>
                                 <include reference="yEv-dr-klo"/>
-                                <include reference="cYZ-td-xvJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -87,10 +87,10 @@
                                 <include reference="ltp-R7-unc"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="JaB-vI-dPe"/>
                                 <include reference="J3B-BA-x2e"/>
                                 <include reference="hwj-d1-daU"/>
                                 <include reference="l8J-Sa-rEH"/>
-                                <include reference="JaB-vI-dPe"/>
                             </mask>
                         </variation>
                     </view>

@@ -29,7 +29,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [self performSegueWithIdentifier:@"unwindToNavigationSegue" sender:self];
+//    [self performSegueWithIdentifier:@"unwindToNavigationSegue" sender:self];
 }
 
 

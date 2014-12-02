@@ -11,10 +11,13 @@
 #import "DeviceInfoViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 
-@interface HomeViewController ()
+@interface HomeViewController () <UIAlertViewDelegate>
 
 @property (readwrite, nonatomic) BOOL needsTour;
+@property (readwrite, nonatomic) int tourStep;
+
 @property (readwrite, nonatomic, getter=isAppearing) BOOL appeared;
+
 @property (strong, nonatomic) NSString *queuedSegueIdentifer;
 
 @end
@@ -23,7 +26,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.needsTour = NO;
+    // MUST CHANGE NEEDS TOUR
+    self.needsTour = YES;
+    self.tourStep = 0;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -54,9 +59,36 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Tour
+
 - (void)startTour {
     NSLog(@"tour should start");
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Yay! You're back!"
+                                                    message:@"Let's get you up and running with a quick tour of the voda app. If you'd like to skip the tour, just press 'Skip' below."
+                                                   delegate:self cancelButtonTitle:@"Skip" otherButtonTitles:@"OK", nil];
+    [alert show];
 }
+
+- (void)continueTour {
+    self.tourStep = self.tourStep + 1;
+    if (self.tourStep > 9) return;
+    
+    NSString *resource = [NSString stringWithFormat:@"step%d", self.tourStep];
+    UIImage *image = [UIImage imageNamed:resource];
+    self.imageView.image = image;
+}
+
+- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex {
+    NSLog(@"index: %lu", buttonIndex);
+    if (buttonIndex == 0) {
+        // cancel
+    } else if (buttonIndex == 1) {
+        [self continueTour];
+    }
+}
+
+#pragma mark - Actions
 
 - (IBAction)facebookLogOutTouched:(id)sender {
     [PFUser logOut]; // Log out

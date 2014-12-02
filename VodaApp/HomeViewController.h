@@ -12,6 +12,8 @@
 
 @interface HomeViewController : UIViewController
 
+@property (strong, nonatomic) UIImageView *imageView;
+
 - (IBAction)unwindToHome:(UIStoryboardSegue *)unwindSegue;
 - (IBAction)facebookLogOutTouched:(id)sender;
 
