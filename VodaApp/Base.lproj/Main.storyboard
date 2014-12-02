@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="home" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" id="vXZ-lx-hvc" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -70,6 +70,10 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="NBG-fY-YCZ"/>
+                    <connections>
+                        <segue destination="MdR-UM-m9U" kind="presentation" identifier="sync-device" id="POU-HG-Ojh"/>
+                        <segue destination="OMW-UY-wN2" kind="presentation" identifier="device-info" id="o3K-cJ-BGp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,8 +137,12 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <segue destination="oOb-pp-BtS" kind="unwind" identifier="unwindToNavigationSegue" unwindAction="unwindToNavigation:" id="RUT-WI-f2T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLI-eI-1tq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="oOb-pp-BtS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2487" y="-1781.25"/>
         </scene>
@@ -172,10 +180,14 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <segue destination="k8W-XA-1jC" kind="unwind" identifier="unwindToHomeSegue" unwindAction="unwindToHome:" id="4tg-nx-Lb8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2iO-0L-dRy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="k8W-XA-1jC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3304.5" y="-1080.75"/>
+            <point key="canvasLocation" x="3314" y="-1782"/>
         </scene>
         <!--Device Info View Controller-->
         <scene sceneID="vul-eQ-MQI">
@@ -211,10 +223,14 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <segue destination="xiD-o7-UXM" kind="unwind" identifier="unwindToHomeSegue" unwindAction="unwindToHome:" id="B9i-g1-vpo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lU6-kp-ZQ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="xiD-o7-UXM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4147.5" y="-1080.75"/>
+            <point key="canvasLocation" x="3314" y="-1081"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="Z4s-Na-AGO">
