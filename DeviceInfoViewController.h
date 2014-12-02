@@ -10,5 +10,8 @@
 
 @interface DeviceInfoViewController : UIViewController
 - (IBAction)doneButtonTouched:(id)sender;
+@property (weak, nonatomic) IBOutlet UIPickerView *picker;
+@property (weak, nonatomic) IBOutlet UIImageView *voda;
+@property (weak, nonatomic) IBOutlet UIImageView *droplet;
 
 @end

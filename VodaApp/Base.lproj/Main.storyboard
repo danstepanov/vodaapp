@@ -385,6 +385,9 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="droplet" destination="LAM-cD-Wk3" id="ndK-z4-pbi"/>
+                        <outlet property="picker" destination="dD6-0n-Cjo" id="hPa-fG-Bbg"/>
+                        <outlet property="voda" destination="IOz-5S-fg6" id="heS-gR-NQo"/>
                         <segue destination="xiD-o7-UXM" kind="unwind" identifier="unwindToHomeSegue" unwindAction="unwindToHome:" id="B9i-g1-vpo"/>
                     </connections>
                 </viewController>
