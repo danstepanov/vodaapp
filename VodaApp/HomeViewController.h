@@ -12,6 +12,8 @@
 
 @interface HomeViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIButton *tourImageButton;
+
 - (IBAction)unwindToHome:(UIStoryboardSegue *)unwindSegue;
 - (IBAction)facebookLogOutTouched:(id)sender;
 

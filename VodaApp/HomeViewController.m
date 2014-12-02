@@ -11,9 +11,13 @@
 #import "DeviceInfoViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 
-@interface HomeViewController ()
+@interface HomeViewController () <UIAlertViewDelegate>
+
+@property (readwrite, nonatomic) BOOL needsTour;
+@property (readwrite, nonatomic) int tourStep;
 
 @property (readwrite, nonatomic, getter=isAppearing) BOOL appeared;
+
 @property (strong, nonatomic) NSString *queuedSegueIdentifer;
 
 @end
@@ -22,6 +26,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.needsTour = NO;
+    self.tourStep = 0;
+    
+    self.tourImageButton.backgroundColor = [UIColor clearColor];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -33,6 +41,11 @@
         self.queuedSegueIdentifer = nil;
     } else {
         self.appeared = YES;
+        
+        if (self.needsTour) {
+            [self startTour];
+            self.needsTour = NO;
+        }
     }
 }
 
@@ -46,6 +59,46 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - Tour
+
+- (void)startTour {
+    NSLog(@"tour should start");
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Yay! You're back!"
+                                                    message:@"Let's get you up and running with a quick tour of the voda app. If you'd like to skip the tour, just press 'Skip' below."
+                                                   delegate:self cancelButtonTitle:@"Skip" otherButtonTitles:@"OK", nil];
+    [alert show];
+}
+
+- (void)continueTour {
+    self.tourStep = self.tourStep + 1;
+    if (self.tourStep > 9) {
+        [self.tourImageButton removeTarget:self action:@selector(continueTour) forControlEvents:UIControlEventTouchUpInside];
+        [self.tourImageButton setBackgroundImage:[UIImage imageNamed:@"step1"]
+                                        forState:UIControlStateNormal];
+        self.tourStep = 1;
+        return;
+    }
+    
+    NSString *resource = [NSString stringWithFormat:@"step%d", self.tourStep];
+    UIImage *image = [UIImage imageNamed:resource];
+    [self.tourImageButton setBackgroundImage:image forState:UIControlStateNormal];
+    [self.tourImageButton addTarget:self action:@selector(continueTour) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex {
+    NSLog(@"index: %lu", buttonIndex);
+    if ((int)buttonIndex == 0) {
+        // skip tour
+        [self.tourImageButton setBackgroundImage:@"step1" forState:UIControlStateNormal];
+    } else if ((int)buttonIndex == 1) {
+        NSLog(@"continuing tour");
+        [self continueTour];
+    }
+}
+
+#pragma mark - Actions
 
 - (IBAction)facebookLogOutTouched:(id)sender {
     [PFUser logOut]; // Log out
@@ -72,7 +125,7 @@
     }
     else if ([unwindSegue.sourceViewController isKindOfClass:[DeviceInfoViewController class]])
     {
-        NSLog(@"HomeVC modal process completed");
+        self.needsTour = YES;
     }
     else
     {
