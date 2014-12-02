@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SyncDeviceViewController : UIViewController
+- (IBAction)syncDeviceButtonTouched:(id)sender;
 
 @end

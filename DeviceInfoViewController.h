@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DeviceInfoViewController : UIViewController
+- (IBAction)doneButtonTouched:(id)sender;
 
 @end
