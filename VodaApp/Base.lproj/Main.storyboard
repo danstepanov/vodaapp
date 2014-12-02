@@ -91,24 +91,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screen 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YT2-w0-TC8">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="389" width="400" height="21"/>
-                                </variation>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Jm-w4-F2J" customClass="FBLoginView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHP-8c-oP9">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="facebookButtonTouched:" destination="gbw-w2-JgO" eventType="touchUpInside" id="LUE-xj-hm2"/>
                                 </connections>
@@ -127,42 +116,40 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="YT2-w0-TC8"/>
                                 <exclude reference="3Jm-w4-F2J"/>
                                 <exclude reference="NHP-8c-oP9"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="u26-AF-8HP"/>
+                                <exclude reference="vzb-Yn-JUc"/>
                                 <exclude reference="B5P-5z-qfP"/>
                                 <exclude reference="dRK-1k-0Hb"/>
                                 <exclude reference="dRL-Tx-5bv"/>
                                 <exclude reference="7FY-65-Odg"/>
                                 <exclude reference="9QZ-Jf-tFn"/>
                                 <exclude reference="MuO-7k-Xas"/>
-                                <exclude reference="u26-AF-8HP"/>
-                                <exclude reference="vzb-Yn-JUc"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="YT2-w0-TC8"/>
                                 <include reference="3Jm-w4-F2J"/>
                                 <include reference="NHP-8c-oP9"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="u26-AF-8HP"/>
+                                <include reference="vzb-Yn-JUc"/>
                                 <include reference="B5P-5z-qfP"/>
                                 <include reference="dRK-1k-0Hb"/>
                                 <include reference="dRL-Tx-5bv"/>
                                 <include reference="7FY-65-Odg"/>
                                 <include reference="9QZ-Jf-tFn"/>
                                 <include reference="MuO-7k-Xas"/>
-                                <include reference="u26-AF-8HP"/>
-                                <include reference="vzb-Yn-JUc"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <segue destination="oOb-pp-BtS" kind="unwind" identifier="unwindToNavigationSegue" unwindAction="unwindToNavigation:" id="RUT-WI-f2T"/>
                         <outlet property="facebookButton" destination="NHP-8c-oP9" id="FNZ-lB-crC"/>
+                        <segue destination="oOb-pp-BtS" kind="unwind" identifier="unwindToNavigationSegue" unwindAction="unwindToNavigation:" id="RUT-WI-f2T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLI-eI-1tq" userLabel="First Responder" sceneMemberID="firstResponder"/>

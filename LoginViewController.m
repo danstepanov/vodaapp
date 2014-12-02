@@ -19,8 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIImage *facebook = [UIImage imageNamed:@"facebook"];
-    [_facebookButton setBackgroundImage:facebook forState:UIControlStateNormal];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,7 +29,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [self performSegueWithIdentifier:@"unwindToNavigationSegue" sender:self];
+   
 }
 
 
