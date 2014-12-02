@@ -24,6 +24,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self performSegueWithIdentifier:@"unwindToHomeSegue" sender:self];
+}
+
 /*
 #pragma mark - Navigation
 

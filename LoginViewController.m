@@ -19,10 +19,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIImage *facebook = [UIImage imageNamed:@"facebook"];
+    [_facebookButton setBackgroundImage:facebook forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self performSegueWithIdentifier:@"unwindToNavigationSegue" sender:self];
 }
 
 
@@ -50,10 +58,12 @@
             } else {
                 NSLog(@"User with facebook logged in!");
             }
-            [self _presentHomeViewControllerAnimated:YES];
+            [self performSegueWithIdentifier:@"unwindToNavigationSegue" sender:self];
         }
     }];
 }
+
+#pragma mark - WIP Not Used
 
 - (void)_presentHomeViewControllerAnimated:(BOOL)animated {
     [self.navigationController popToRootViewControllerAnimated:YES];

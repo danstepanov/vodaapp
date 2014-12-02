@@ -10,9 +10,12 @@
 #import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
 
-@interface ViewController : UIViewController
+@interface HomeViewController : UIViewController
+
+- (IBAction)unwindToHome:(UIStoryboardSegue *)unwindSegue;
 - (IBAction)facebookLogOutTouched:(id)sender;
 
+- (void)presentSyncDeviceViewController;
 
 @end
 
