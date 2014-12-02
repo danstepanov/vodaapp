@@ -19,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIImage *facebook = [UIImage imageNamed:@"facebook"];
+    [_facebookButton setBackgroundImage:facebook forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,6 +56,7 @@
         }
     }];
 }
+
 
 - (void)_presentHomeViewControllerAnimated:(BOOL)animated {
     [self.navigationController popToRootViewControllerAnimated:YES];

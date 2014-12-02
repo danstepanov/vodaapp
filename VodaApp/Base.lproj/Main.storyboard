@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8nb-2A-ly7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8nb-2A-ly7">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -100,39 +100,65 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHP-8c-oP9">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookButtonTouched:" destination="gbw-w2-JgO" eventType="touchUpInside" id="LUE-xj-hm2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3Jm-w4-F2J" firstAttribute="leading" secondItem="WrV-s7-YsZ" secondAttribute="leadingMargin" id="7FY-65-Odg"/>
                             <constraint firstItem="3Jm-w4-F2J" firstAttribute="top" secondItem="9Wp-eh-t1D" secondAttribute="bottom" constant="720" id="9QZ-Jf-tFn"/>
+                            <constraint firstItem="NHP-8c-oP9" firstAttribute="top" secondItem="9Wp-eh-t1D" secondAttribute="bottom" constant="535" id="B5P-5z-qfP"/>
                             <constraint firstItem="3Jm-w4-F2J" firstAttribute="trailing" secondItem="WrV-s7-YsZ" secondAttribute="trailingMargin" id="MuO-7k-Xas"/>
+                            <constraint firstItem="NHP-8c-oP9" firstAttribute="trailing" secondItem="WrV-s7-YsZ" secondAttribute="trailingMargin" id="dRK-1k-0Hb"/>
+                            <constraint firstItem="NHP-8c-oP9" firstAttribute="leading" secondItem="WrV-s7-YsZ" secondAttribute="leadingMargin" id="dRL-Tx-5bv"/>
                             <constraint firstItem="fBj-Xn-qRK" firstAttribute="top" secondItem="3Jm-w4-F2J" secondAttribute="bottom" constant="8" id="u26-AF-8HP"/>
+                            <constraint firstItem="fBj-Xn-qRK" firstAttribute="top" secondItem="NHP-8c-oP9" secondAttribute="bottom" constant="215" id="vzb-Yn-JUc"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="YT2-w0-TC8"/>
                                 <exclude reference="3Jm-w4-F2J"/>
+                                <exclude reference="NHP-8c-oP9"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="u26-AF-8HP"/>
+                                <exclude reference="B5P-5z-qfP"/>
+                                <exclude reference="dRK-1k-0Hb"/>
+                                <exclude reference="dRL-Tx-5bv"/>
                                 <exclude reference="7FY-65-Odg"/>
                                 <exclude reference="9QZ-Jf-tFn"/>
                                 <exclude reference="MuO-7k-Xas"/>
+                                <exclude reference="u26-AF-8HP"/>
+                                <exclude reference="vzb-Yn-JUc"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="YT2-w0-TC8"/>
                                 <include reference="3Jm-w4-F2J"/>
+                                <include reference="NHP-8c-oP9"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="u26-AF-8HP"/>
+                                <include reference="B5P-5z-qfP"/>
+                                <include reference="dRK-1k-0Hb"/>
+                                <include reference="dRL-Tx-5bv"/>
                                 <include reference="7FY-65-Odg"/>
                                 <include reference="9QZ-Jf-tFn"/>
                                 <include reference="MuO-7k-Xas"/>
+                                <include reference="u26-AF-8HP"/>
+                                <include reference="vzb-Yn-JUc"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="facebookButton" destination="NHP-8c-oP9" id="FNZ-lB-crC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLI-eI-1tq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

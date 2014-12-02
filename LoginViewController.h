@@ -10,5 +10,7 @@
 
 @interface LoginViewController : UIViewController
 - (IBAction)facebookButtonTouched:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *facebookButton;
+
 
 @end
