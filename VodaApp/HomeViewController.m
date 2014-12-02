@@ -47,6 +47,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)facebookLogOutTouched:(id)sender {
+    [PFUser logOut]; // Log out
+    
+    // Return to Login view controller
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 - (void)presentSyncDeviceViewController {
     NSLog(@"presenting sync device view controller");
     self.appeared = NO;
@@ -56,17 +63,6 @@
 - (void)presentDeviceInfoViewController {
     NSLog(@"presenting device info view controller");
     self.queuedSegueIdentifer = @"device-info";
-}
-
-- (void)setQueuedSegueIdentifer:(NSString *)queuedSegueIdentifer {
-    if ([self isAppearing] && (queuedSegueIdentifer != nil)) {
-        self.appeared = NO;
-        [self performSegueWithIdentifier:queuedSegueIdentifer sender:self];
-    } else {
-        [self willChangeValueForKey:@"queuedSegueIdentifier"];
-        _queuedSegueIdentifer = queuedSegueIdentifer;
-        [self didChangeValueForKey:@"queuedSegueIdentifier"];
-    }
 }
 
 - (IBAction)unwindToHome:(UIStoryboardSegue *)unwindSegue {
@@ -86,10 +82,17 @@
     return;
 }
 
-- (IBAction)facebookLogOutTouched:(id)sender {
-    [PFUser logOut]; // Log out
-    
-    // Return to Login view controller
-    [self.navigationController popToRootViewControllerAnimated:YES];
+#pragma mark - SEM: Queued Segues
+
+- (void)setQueuedSegueIdentifer:(NSString *)queuedSegueIdentifer {
+    if ([self isAppearing] && (queuedSegueIdentifer != nil)) {
+        self.appeared = NO;
+        [self performSegueWithIdentifier:queuedSegueIdentifer sender:self];
+    } else {
+        [self willChangeValueForKey:@"queuedSegueIdentifier"];
+        _queuedSegueIdentifer = queuedSegueIdentifer;
+        [self didChangeValueForKey:@"queuedSegueIdentifier"];
+    }
 }
+
 @end
