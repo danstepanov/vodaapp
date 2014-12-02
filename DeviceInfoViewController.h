@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DeviceInfoViewController : UIViewController
+@interface DeviceInfoViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
 - (IBAction)doneButtonTouched:(id)sender;
 @property (weak, nonatomic) IBOutlet UIPickerView *picker;
 @property (weak, nonatomic) IBOutlet UIImageView *voda;

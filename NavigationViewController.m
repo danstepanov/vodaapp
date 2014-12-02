@@ -24,8 +24,8 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    [PFUser logOut];
     PFUser *user = [PFUser currentUser];
-//    [PFUser logOut];
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

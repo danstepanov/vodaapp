@@ -26,9 +26,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // MUST CHANGE NEEDS TOUR
-    self.needsTour = YES;
+    self.needsTour = NO;
     self.tourStep = 0;
+    
+    self.tourImageButton.backgroundColor = [UIColor clearColor];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -72,18 +73,27 @@
 
 - (void)continueTour {
     self.tourStep = self.tourStep + 1;
-    if (self.tourStep > 9) return;
+    if (self.tourStep > 9) {
+        [self.tourImageButton removeTarget:self action:@selector(continueTour) forControlEvents:UIControlEventTouchUpInside];
+        [self.tourImageButton setBackgroundImage:[UIImage imageNamed:@"step1"]
+                                        forState:UIControlStateNormal];
+        self.tourStep = 1;
+        return;
+    }
     
     NSString *resource = [NSString stringWithFormat:@"step%d", self.tourStep];
     UIImage *image = [UIImage imageNamed:resource];
-    self.imageView.image = image;
+    [self.tourImageButton setBackgroundImage:image forState:UIControlStateNormal];
+    [self.tourImageButton addTarget:self action:@selector(continueTour) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex {
     NSLog(@"index: %lu", buttonIndex);
-    if (buttonIndex == 0) {
-        // cancel
-    } else if (buttonIndex == 1) {
+    if ((int)buttonIndex == 0) {
+        // skip tour
+        [self.tourImageButton setBackgroundImage:@"step1" forState:UIControlStateNormal];
+    } else if ((int)buttonIndex == 1) {
+        NSLog(@"continuing tour");
         [self continueTour];
     }
 }
