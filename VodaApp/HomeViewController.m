@@ -13,6 +13,7 @@
 
 @interface HomeViewController ()
 
+@property (readwrite, nonatomic) BOOL needsTour;
 @property (readwrite, nonatomic, getter=isAppearing) BOOL appeared;
 @property (strong, nonatomic) NSString *queuedSegueIdentifer;
 
@@ -22,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.needsTour = NO;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -33,6 +35,11 @@
         self.queuedSegueIdentifer = nil;
     } else {
         self.appeared = YES;
+        
+        if (self.needsTour) {
+            [self startTour];
+            self.needsTour = NO;
+        }
     }
 }
 
@@ -45,6 +52,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)startTour {
+    NSLog(@"tour should start");
 }
 
 - (IBAction)facebookLogOutTouched:(id)sender {
@@ -72,7 +83,7 @@
     }
     else if ([unwindSegue.sourceViewController isKindOfClass:[DeviceInfoViewController class]])
     {
-        NSLog(@"HomeVC modal process completed");
+        self.needsTour = YES;
     }
     else
     {

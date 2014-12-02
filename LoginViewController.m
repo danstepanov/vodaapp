@@ -29,13 +29,13 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-   
+    [self performSegueWithIdentifier:@"unwindToNavigationSegue" sender:self];
 }
 
 
 - (IBAction)facebookButtonTouched:(id)sender {
     // Set permissions required from the facebook user account
-    NSArray *permissions = @[ @"public_profile", @"email"];
+    NSArray *permissions = @[ @"public_profile", @"email" ];
     
     // Login PFUser using Facebook
     [PFFacebookUtils logInWithPermissions:permissions block:^(PFUser *user, NSError *error) {
