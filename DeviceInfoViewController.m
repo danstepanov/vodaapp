@@ -8,7 +8,9 @@
 
 #import "DeviceInfoViewController.h"
 
-@interface DeviceInfoViewController ()
+@interface DeviceInfoViewController () {
+    NSArray *_pickerData;
+}
 
 @end
 
@@ -17,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    // Initialize Data
+    _pickerData = @[@"Sink", @"Toilet", @"Shower", @"Garden Hose", @"Other"];
 }
 
 - (void)didReceiveMemoryWarning {
